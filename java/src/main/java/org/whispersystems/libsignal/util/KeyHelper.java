@@ -85,7 +85,7 @@ public class KeyHelper {
 
     start--;
 
-    for (int i=0;i<count;i++) {
+    for (int i = 0; i < count; i++) {
       results.add(new PreKeyRecord(((start + i) % (Medium.MAX_VALUE-1)) + 1, Curve.generateKeyPair()));
     }
 
