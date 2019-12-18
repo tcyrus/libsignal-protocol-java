@@ -31,7 +31,7 @@ public class Hex {
 
   public static String toStringCondensed(byte[] bytes) {
     StringBuffer buf = new StringBuffer();
-    for (int i=0;i<bytes.length;i++) {
+    for (int i = 0; i < bytes.length; i++) {
       appendHexChar(buf, bytes[i]);
     }
     return buf.toString();
@@ -50,7 +50,7 @@ public class Hex {
     for (int i = 0, j = 0; j < len; i++) {
       int f = Character.digit(data[j], 16) << 4;
       j++;
-      f = f | Character.digit(data[j], 16);
+      f |= Character.digit(data[j], 16);
       j++;
       out[i] = (byte) (f & 0xFF);
     }
